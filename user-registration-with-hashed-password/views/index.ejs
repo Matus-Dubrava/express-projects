@@ -1,0 +1,22 @@
+<% include _header %>
+
+<h1>Users</h1>
+
+<% if (users.length !== 0) { %>
+  <% users.forEach(user => { %>
+    <div class="card">
+      <div class="card-header">
+        <%= user.username %>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          <%= user.password %>
+        </p>
+      </div>
+    </div>
+  <% }) %>
+<% } else { %>
+  <p>No users have been registered yet</p>
+<% } %>
+
+<% include _footer %>
