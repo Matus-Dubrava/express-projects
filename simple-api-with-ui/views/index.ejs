@@ -1,0 +1,23 @@
+<% include _header %>
+
+<h1>Get random number</h1>
+
+<form method="GET">
+  <div class="form-group">
+    <label for="min">min. value</label>
+    <input id="min" class="form-control" type="number" name="min"
+      placeholder="0" required autofocus>
+  </div>
+  <div class="form-group">
+    <label for="max">max. value</label>
+    <input id="max" class="form-control" type="number" name="min"
+      placeholder="1000" required>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-primary btn-block" type="submit" value="go">
+  </div>
+</form>
+
+<h2>result: <span id="result"></span></h2>
+
+<% include _footer %>
