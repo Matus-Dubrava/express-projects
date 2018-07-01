@@ -1,0 +1,19 @@
+<% include _header %>
+
+<div class="card">
+  <div class="card-header">
+    <%= user.username %>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title"><%= user.createdAt %></h6>
+    <p class="card-text"><%= user.bio %></p>
+    <a class="btn btn-primary" href="/edit-user/<%= user.username %>">
+      Edit profile
+    </a>
+    <a class="btn btn-danger" href="/delete-user/<%= user.username %>">
+      Delete profile
+    </a>
+  </div>
+</div>
+
+<% include _footer %>

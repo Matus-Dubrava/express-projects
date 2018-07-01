@@ -1,0 +1,14 @@
+<% include _header %>
+
+<h1>Users</h1>
+
+<% if (users.length !== 0) { %>
+  <% users.forEach(user => { %>
+    <a href="/<%= user.username %>"><%= user.username %></a>
+    <hr>
+  <% }) %>
+<% } else { %>
+  <p>No users have been registered yet</p>
+<% } %>
+
+<% include _footer %>

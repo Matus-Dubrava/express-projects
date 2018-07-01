@@ -1,0 +1,27 @@
+<% include _header %>
+
+<h1>Registration form</h1>
+
+<% if (flashed) { %>
+  <p style="color: red;"><%= flashed %></p>
+<% } %>
+
+<form action="/register" method="POST">
+  <div class="form-group">
+    <input class="form-control" type="text" name="username"
+      placeholder="Usename" required autofocus>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" name="password"
+    placeholder="password" required>
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" name="bio"
+      placeholder="Tell us about yourself"></textarea>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-primary btn-block" type="submit" value="Register">
+  </div>
+</form>
+
+<% include _footer %>
