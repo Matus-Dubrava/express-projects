@@ -1,0 +1,20 @@
+{
+  "name": "request-resending",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=request-resending:* nodemon app.js",
+    "compServer": "COMPSERVPORT=3001 nodemon comp-server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.3",
+    "morgan": "^1.9.0"
+  }
+}

@@ -1,0 +1,17 @@
+<% include _header %>
+
+<% if (compval) { %>
+  <p>Result for value <%= compval %> is: <%= compres %></p>
+<% } %>
+
+<form action="/compute" method="get">
+  <div class="form-group">
+    <input class="form-control" type="text" name="compval"
+      placeholder="Enter a value" required autofocus>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+</form>
+
+<% include _footer %>
