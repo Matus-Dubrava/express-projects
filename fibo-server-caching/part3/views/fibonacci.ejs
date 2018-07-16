@@ -1,0 +1,17 @@
+<% include _header %>
+
+<% if (fiboinp) { %>
+  <p><%= fiboinp %>th fibonacci number is <%= fibores %>
+<% } %>
+
+<form action="/fibonacci" method="get">
+  <div class="form-group">
+    <input class="form-control" type="text" name="fiboinp"
+      placeholder="Enter a number" required autofocus>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-primary" type="submit">
+  </div>
+</form>
+
+<% include _footer %>
