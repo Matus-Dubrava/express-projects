@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <title><%= title %></title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">App</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <% if (!authUser) { %>
+            <li><a href="/users/login">Login</a></li>
+            <li><a href="/users/register">Register</a></li>
+          <% } else { %>
+            <li><a href="#">Welcome, <%= authUser.username %></a></li>
+            <li><a href="/users/logout">Logout</a></li>
+          <% } %>
+        </ul>
+      </nav>
+
+      <% if (messages && messages.length) { %>
+        <div class="flashed-messages">
+          <% messages.forEach((message) => { %>
+            <div><%= message %></div>
+          <% }) %>
+        </div>
+      <% } %>
+
+      <% if (errors && errors.length) { %>
+        <div class="flashed-errors">
+          <% errors.forEach((error) => { %>
+            <div><%= error %></div>
+          <% }) %>
+        </div>
+      <% } %>
+    </header>
+
+    <main class="main-content">
+      <h1><%= title %></h1>
